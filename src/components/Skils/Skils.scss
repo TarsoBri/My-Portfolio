@@ -1,0 +1,61 @@
+@import "../../App.scss";
+
+.skils_container {
+  .slider {
+    overflow: hidden;
+    height: 200px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    &::before,
+    &::after {
+      background-image: linear-gradient(
+        to right,
+        $color1 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 15%;
+      z-index: 2;
+    }
+
+    &::before {
+      left: 0;
+      top: 0;
+    }
+    &::after {
+      right: 0;
+      top: 0;
+      transform: rotateZ(180deg);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      animation: scroll 30s linear infinite;
+
+      li {
+        font-size: 6em;
+        margin-left: 0.7em;
+        padding-block: 1em;
+        transition: all 0.2s;
+      }
+    }
+  }
+}
+
+// KeyFrames
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100%));
+  }
+}

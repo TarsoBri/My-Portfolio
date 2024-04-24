@@ -1,0 +1,51 @@
+@import "../../App.scss";
+
+.about_conatiner {
+  h2 {
+    margin-bottom: 5em;
+  }
+  .about_main {
+    display: flex;
+    gap: 2em;
+
+    .about_content {
+      p {
+        font-size: 1.5em;
+      }
+
+      button {
+        border: 1px solid white;
+        border-radius: 10px;
+        color: white;
+        padding: 0.1em 1em;
+        font-size: 2em;
+        cursor: pointer;
+        background-color: $color3;
+        transition: all 0.2s;
+
+        &:hover {
+          background-color: $color5;
+        }
+      }
+    }
+    .about_img {
+      position: relative;
+
+      .img_contour {
+        z-index: 0;
+        border-radius: 10px;
+        //transform: translate(60px, -60px);
+        position: absolute;
+        width: 345px;
+        height: 370px;
+        border: 5px solid white;
+      }
+
+      img {
+        border-radius: 10px;
+        width: 350px;
+        z-index: 97;
+      }
+    }
+  }
+}
