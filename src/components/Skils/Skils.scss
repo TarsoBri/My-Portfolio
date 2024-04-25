@@ -24,11 +24,11 @@
     }
 
     &::before {
-      left: 0;
+      left: -1px;
       top: 0;
     }
     &::after {
-      right: 0;
+      right: -1px;
       top: 0;
       transform: rotateZ(180deg);
     }
@@ -38,7 +38,7 @@
       padding: 0;
       margin: 0;
       display: flex;
-      animation: scroll 30s linear infinite;
+      animation: scroll 40s linear infinite;
 
       li {
         font-size: 6em;

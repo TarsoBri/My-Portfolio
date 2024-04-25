@@ -1,6 +1,6 @@
 @import "../../App.scss";
 
-header {
+.header {
   background-color: transparent;
   width: 100vw;
   display: flex;
@@ -10,6 +10,8 @@ header {
   z-index: 99;
   top: 0;
   left: 0;
+  background-color: transparent;
+  transition: all 0.5s;
 
   .header_menu {
     list-style: none;
@@ -17,13 +19,11 @@ header {
     gap: 10px;
     display: flex;
 
-    li button {
+    li a {
       color: white;
       font-size: 1em;
+      text-decoration: none;
       text-transform: uppercase;
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
       transition: all 0.3s;
       border-bottom: transparent 1px solid;
       padding: 0.5em;
@@ -35,4 +35,8 @@ header {
       }
     }
   }
+}
+.appear {
+  padding-block: 1em;
+  background-color: $color1;
 }

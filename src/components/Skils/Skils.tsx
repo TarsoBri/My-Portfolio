@@ -14,100 +14,46 @@ import {
   FaJs,
 } from "react-icons/fa";
 import { SiTypescript, SiMongodb, SiFirebase, SiExpress } from "react-icons/si";
-
+import { useEffect } from "react";
+import ScrollReveal from "scrollreveal";
 const Skils = () => {
+  useEffect(() => {
+    ScrollReveal({ reset: true }).reveal(".slider", {
+      duration: 1000,
+      distance: "100px",
+      origin: "bottom",
+    });
+  });
+
+  const icons: JSX.Element[] = [
+    <FaJs />,
+    <FaReact />,
+    <FaNodeJs />,
+    <SiExpress />,
+    <SiTypescript />,
+    <FaHtml5 />,
+    <FaCss3 />,
+    <FaGitAlt />,
+    <SiMongodb />,
+    <FaPython />,
+    <FaJava />,
+    <FaSass />,
+    <FaBootstrap />,
+    <SiFirebase />,
+  ];
+
   return (
     <div className="skils_container">
-      <h2>Ferramentas</h2>
       <div className="slider">
         <ul>
-          <li>
-            <FaJs />
-          </li>
-          <li>
-            <FaReact />
-          </li>
-          <li>
-            <FaGitAlt />
-          </li>
-          <li>
-            <SiTypescript />
-          </li>
-          <li>
-            <FaNodeJs />
-          </li>
-          <li>
-            <SiExpress />
-          </li>
-          <li>
-            <SiMongodb />
-          </li>
-          <li>
-            <FaHtml5 />
-          </li>
-          <li>
-            <FaCss3 />
-          </li>
-          <li>
-            <FaPython />
-          </li>
-          <li>
-            <FaJava />
-          </li>
-          <li>
-            <SiFirebase />
-          </li>
-          <li>
-            <FaSass />
-          </li>
-          <li>
-            <FaBootstrap />
-          </li>
+          {icons &&
+            icons.map((icon, i) => (
+              <li key={i} onMouseOver={() => console.log("teste")}>
+                {icon}
+              </li>
+            ))}
         </ul>
-        <ul>
-          <li>
-            <FaJs />
-          </li>
-          <li>
-            <FaReact />
-          </li>
-          <li>
-            <FaGitAlt />
-          </li>
-          <li>
-            <SiTypescript />
-          </li>
-          <li>
-            <FaNodeJs />
-          </li>
-          <li>
-            <SiExpress />
-          </li>
-          <li>
-            <SiMongodb />
-          </li>
-          <li>
-            <FaHtml5 />
-          </li>
-          <li>
-            <FaCss3 />
-          </li>
-          <li>
-            <FaPython />
-          </li>
-          <li>
-            <FaJava />
-          </li>
-          <li>
-            <SiFirebase />
-          </li>
-          <li>
-            <FaSass />
-          </li>
-          <li>
-            <FaBootstrap />
-          </li>
-        </ul>
+        <ul>{icons && icons.map((icon, i) => <li key={i}>{icon}</li>)}</ul>
       </div>
     </div>
   );

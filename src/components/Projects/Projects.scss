@@ -1,19 +1,59 @@
 @import "../../App.scss";
 
 .projects_container {
-  .project {
-    margin-top: 8em;
-    display: flex;
-    background-color: $color2;
-    border-radius: 10px;
+  padding-top: 5em;
 
-    img {
-      width: 50%;
-      border-radius: 10px;
+  h2 {
+    margin-bottom: 5em;
+  }
+
+  .project {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 5em;
+
+    .project_img {
+      height: 250px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 2s;
+
+      &:hover {
+        &::after {
+          border-radius: 10px 0 0 10px;
+          content: "";
+          position: absolute;
+          background-color: $color1;
+          opacity: 0.6;
+          width: 100%;
+          height: 100%;
+          z-index: 94;
+        }
+        &::before {
+          content: "Ver Mais";
+          z-index: 95;
+          border-radius: 10px;
+          position: absolute;
+          font-size: 2em;
+          color: white;
+        }
+      }
+
+      img {
+        border-radius: 10px 10px 0 0;
+        width: 100%;
+        height: 100%;
+      }
     }
 
     .project_content {
-      padding: 1em;
+      border-radius: 0 0 10px 10px;
+      background-color: $color1_5;
+      padding: 0.5cqh 2em 2em 2em;
 
       ul {
         padding: 0;
@@ -24,13 +64,121 @@
       }
       ul li a {
         color: white;
-        font-size: 1.5em;
+        font-size: 1.7em;
         transition: all 0.2s;
 
         &:hover {
           color: #a1a1a1;
         }
       }
+
+      .project_content_icon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+
+        span {
+          font-size: 0.5em;
+        }
+      }
     }
   }
 }
+
+//  .project {
+//   visibility: hidden;
+//   display: flex;
+//   height: 200px;
+//   width: 100%;
+
+//   .project_img {
+//     width: 40%;
+//     height: 100%;
+//     position: relative;
+
+//     &:hover {
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       transition: all 2s;
+
+//       &::after {
+//         border-radius: 10px 0 0 10px;
+//         content: "";
+//         position: absolute;
+//         background-color: $color1;
+//         opacity: 0.6;
+//         width: 100%;
+//         height: 100%;
+//         z-index: 94;
+//       }
+//       &::before {
+//         content: "Ver Mais";
+//         z-index: 95;
+//         padding: 0.2em 0.5em;
+//         border-radius: 10px;
+//         position: absolute;
+//         font-size: 2em;
+//         color: white;
+//       }
+//     }
+
+//     img {
+//       border-radius: 10px 0 0 10px;
+//       width: 100%;
+//       height: 100%;
+//     }
+//   }
+
+//   .project_content {
+//     border-radius: 0 10px 10px 0;
+//     width: 60%;
+//     background-color: $color2;
+//     padding: 1em;
+
+//     ul {
+//       padding: 0;
+//       margin: 0;
+//       list-style: none;
+//       display: flex;
+//       gap: 1em;
+//     }
+//     ul li a {
+//       color: white;
+//       font-size: 1.7em;
+//       transition: all 0.2s;
+
+//       &:hover {
+//         color: #a1a1a1;
+//       }
+//     }
+
+//     .project_content_icon {
+//       display: flex;
+//       flex-direction: column;
+//       align-items: center;
+//       text-decoration: none;
+
+//       span {
+//         font-size: 0.5em;
+//       }
+//     }
+//   }
+// }
+
+// .project_rigth {
+//   .project_content {
+//     border-radius: 10px 0 0 10px;
+//   }
+//   .project_img {
+//     &:hover {
+//       &::after {
+//         border-radius: 0 10px 10px 0;
+//       }
+//     }
+//     img {
+//       border-radius: 0 10px 10px 0;
+//     }
+//   }
+// }

@@ -1,23 +1,28 @@
 import "./Navbar.scss";
 
 const Navbar = () => {
+  window.addEventListener("scroll", () => {
+    const header = document.getElementsByClassName("header")[0];
+    header.classList.toggle("appear", window.scrollY > 0);
+  });
+
   return (
-    <header>
+    <header className="header">
       <ul className="header_menu">
         <li>
-          <button>Início</button>
+          <a href="#">Início</a>
         </li>
+
         <li>
-          <button>Projetos</button>
+          <a href="#projects">Projetos</a>
         </li>
+
         <li>
-          <button>Sobre</button>
+          <a href="#about">Sobre</a>
         </li>
+
         <li>
-          <button>Ferramentas</button>
-        </li>
-        <li>
-          <button>Contato</button>
+          <a href="#contact">Contato</a>
         </li>
       </ul>
     </header>

@@ -1,7 +1,23 @@
 import "./About.scss";
+import { useEffect } from "react";
+import ScrollReveal from "scrollreveal";
+import Skils from "../Skils/Skils";
+
 const About = () => {
+  useEffect(() => {
+    ScrollReveal({ reset: true }).reveal(".about_content", {
+      duration: 1000,
+      distance: "100px",
+      origin: "left",
+    });
+    ScrollReveal({ reset: true }).reveal(".about_img", {
+      duration: 1000,
+      distance: "100px",
+      origin: "rigth",
+    });
+  }, []);
   return (
-    <div className="about_conatiner">
+    <div id="about" className="about_conatiner">
       <h2>Sobre</h2>
       <div className="about_main">
         <div className="about_content">
@@ -18,6 +34,8 @@ const About = () => {
           <img src="../../../public/FotoDePerfil.png" alt="Projeto BlogVerse" />
         </div>
       </div>
+
+      <Skils />
     </div>
   );
 };

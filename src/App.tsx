@@ -5,7 +5,6 @@ import Contact from "./components/Contact/Contact";
 // Components
 import Navbar from "./components/Navbar/Navbar";
 import Projects from "./components/Projects/Projects";
-import Skils from "./components/Skils/Skils";
 import Start from "./components/Start/Start";
 
 function App() {
@@ -19,8 +18,6 @@ function App() {
         <Projects />
 
         <About />
-
-        <Skils />
 
         <Contact />
       </div>
