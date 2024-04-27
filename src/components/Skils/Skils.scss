@@ -1,9 +1,10 @@
 @import "../../App.scss";
 
 .skils_container {
+  margin-top: 2em;
   .slider {
     overflow: hidden;
-    height: 200px;
+    height: 100px;
     position: relative;
     width: 100%;
     display: flex;
@@ -13,7 +14,7 @@
     &::after {
       background-image: linear-gradient(
         to right,
-        $color1 0%,
+        $color1_5 0%,
         rgba(255, 255, 255, 0) 100%
       );
       content: "";
@@ -41,7 +42,7 @@
       animation: scroll 40s linear infinite;
 
       li {
-        font-size: 6em;
+        font-size: 3.5em;
         margin-left: 0.7em;
         padding-block: 1em;
         transition: all 0.2s;

@@ -22,6 +22,7 @@ const Skils = () => {
       duration: 1000,
       distance: "100px",
       origin: "bottom",
+      easing: "ease-in-out",
     });
   });
 
