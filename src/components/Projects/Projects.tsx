@@ -31,7 +31,7 @@ const Projects = () => {
             target="_blank"
           >
             <img
-              src="../../../public/Projects_Pictures/VistoriasBrasil_print.png"
+              src="/Projects_Pictures/VistoriasBrasil_print.png"
               alt="Projeto Vistorias Brasil"
             />
           </a>
@@ -86,7 +86,7 @@ const Projects = () => {
             target="_blank"
           >
             <img
-              src="../../../public/Projects_Pictures/InsideFilms_print.png"
+              src="/Projects_Pictures/InsideFilms_print.png"
               alt="Projeto Inside Films"
             />
           </a>
@@ -127,7 +127,7 @@ const Projects = () => {
             target="_blank"
           >
             <img
-              src="../../../public/Projects_Pictures/BlogVerse_print.png"
+              src="/Projects_Pictures/BlogVerse_print.png"
               alt="Projeto BlogVerse"
             />
           </a>

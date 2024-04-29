@@ -38,7 +38,7 @@ const About = () => {
         <h2>Sobre</h2>
         <div className="about_img">
           <div className="img_contour"></div>
-          <img src="../../../public/FotoDePerfil.png" alt="Projeto BlogVerse" />
+          <img src="/FotoDePerfil.png" alt="Projeto BlogVerse" />
         </div>
         <div className="about_content">
           <p>
