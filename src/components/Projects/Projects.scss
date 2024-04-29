@@ -2,115 +2,116 @@
 
 .projects_container {
   .projects_contents {
-    h2 {
-      margin-top: 4em;
-      text-align: start;
-    }
     display: flex;
     flex-direction: column;
+    gap: 3em;
     margin: auto;
     width: 90vw;
     max-width: 900px;
-  }
-  .project {
-    visibility: hidden;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 5em;
-    border: 10px solid$color1_5;
-    background-color: $color1_5;
-    border-radius: 15px;
-    box-sizing: border-box;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.177);
 
-    .project_img {
-      height: 200px;
-      position: relative;
+    h2 {
+      margin-block: 4em 1em;
+      text-align: start;
+    }
+    .project {
+      visibility: hidden;
       display: flex;
       justify-content: center;
-      align-items: center;
-      transition: all 2s;
-
-      &:hover {
-        &::after {
-          border-radius: 10px;
-          content: "";
-          position: absolute;
-          background-color: $color1;
-          opacity: 0.6;
-          width: 100%;
-          height: 100%;
-          z-index: 94;
-        }
-        &::before {
-          content: "Ver Mais";
-          z-index: 95;
-          border-radius: 10px;
-          position: absolute;
-          font-size: 2em;
-          color: white;
-        }
-      }
-
-      img {
-        border-radius: 10px;
-        width: 100%;
-        height: 100%;
-      }
-    }
-
-    .project_content {
+      flex-direction: column;
+      width: 100%;
+      border: 10px solid $color1_5;
       background-color: $color1_5;
-      padding: 0.5em;
+      border-radius: 15px;
+      box-sizing: border-box;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.177);
 
-      .title_vistorias {
-        margin-block: 1em 1em;
+      .project_img {
+        height: 200px;
+        position: relative;
         display: flex;
-
-        span {
-          color: rgb(58, 0, 206);
-          display: inline-block;
-          padding: 2px;
-        }
-      }
-      .title_films {
-        color: red;
-      }
-      .title_blog {
-        font-size: 1.2em;
-        span {
-          font-size: 1.1em;
-          font-weight: bolder;
-        }
-      }
-
-      ul {
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        display: flex;
-        gap: 1em;
-      }
-      ul li a {
-        color: white;
-        font-size: 1.7em;
-        transition: all 0.2s;
+        justify-content: center;
+        align-items: center;
+        transition: all 2s;
 
         &:hover {
-          color: #a1a1a1;
+          &::after {
+            border-radius: 10px;
+            content: "";
+            position: absolute;
+            background-color: $color1;
+            opacity: 0.6;
+            width: 100%;
+            height: 100%;
+            z-index: 94;
+          }
+          &::before {
+            content: "Ver Mais";
+            z-index: 95;
+            border-radius: 10px;
+            position: absolute;
+            font-size: 2em;
+            color: white;
+          }
+        }
+
+        img {
+          border-radius: 10px;
+          width: 100%;
+          height: 100%;
         }
       }
 
-      .project_content_icon {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-decoration: none;
+      .project_content {
+        background-color: $color1_5;
+        padding: 0.5em;
 
-        span {
-          font-size: 0.5em;
+        .title_vistorias {
+          margin-block: 1em 1em;
+          display: flex;
+
+          span {
+            color: rgb(58, 0, 206);
+            display: inline-block;
+            padding: 2px;
+          }
+        }
+        .title_films {
+          color: red;
+        }
+        .title_blog {
+          font-size: 1.2em;
+          span {
+            font-size: 1.1em;
+            font-weight: bolder;
+          }
+        }
+
+        ul {
+          padding: 0;
+          margin: 0;
+          list-style: none;
+          display: flex;
+          gap: 1em;
+        }
+        ul li a {
+          color: white;
+          font-size: 1.7em;
+          transition: all 0.2s;
+
+          &:hover {
+            color: #a1a1a1;
+          }
+        }
+
+        .project_content_icon {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-decoration: none;
+
+          span {
+            font-size: 0.5em;
+          }
         }
       }
     }

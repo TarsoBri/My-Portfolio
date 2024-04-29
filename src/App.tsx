@@ -1,6 +1,7 @@
 import "./App.scss";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 
 // Components
 import Navbar from "./components/Navbar/Navbar";
@@ -21,6 +22,8 @@ function App() {
 
         <Contact />
       </div>
+
+      <Footer />
     </div>
   );
 }
