@@ -51,6 +51,18 @@
   }
 }
 
+@media (min-width: 850px) {
+  .skils_container {
+    .slider {
+      ul {
+        li {
+          font-size: 5em;
+        }
+      }
+    }
+  }
+}
+
 // KeyFrames
 @keyframes scroll {
   0% {

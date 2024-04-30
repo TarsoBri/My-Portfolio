@@ -46,14 +46,7 @@ const Skils = () => {
   return (
     <div className="skils_container">
       <div className="slider">
-        <ul>
-          {icons &&
-            icons.map((icon, i) => (
-              <li key={i} onMouseOver={() => console.log("teste")}>
-                {icon}
-              </li>
-            ))}
-        </ul>
+        <ul>{icons && icons.map((icon, i) => <li key={i}>{icon}</li>)}</ul>
         <ul>{icons && icons.map((icon, i) => <li key={i}>{icon}</li>)}</ul>
       </div>
     </div>
