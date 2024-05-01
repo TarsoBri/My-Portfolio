@@ -2,8 +2,8 @@ import "./Navbar.scss";
 
 const Navbar = () => {
   window.addEventListener("scroll", () => {
-    const header = document.getElementsByClassName("header")[0];
-    header.classList.toggle("appear", window.scrollY > 0);
+    const header = document.querySelector(".header");
+    header && header.classList.toggle("appear", window.scrollY > 0);
   });
 
   return (

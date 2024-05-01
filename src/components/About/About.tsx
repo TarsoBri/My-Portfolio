@@ -43,10 +43,12 @@ const About = () => {
           </div>
           <div className="about_texts">
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic
-              repellat deleniti qui minima sit consequatur, deserunt ex saepe
-              atque cupiditate numquam provident ipsum sapiente distinctio
-              repellendus dolores unde amet? Dolore.
+              Me chamo Tarso, sou desenvolvedor web e estou graduando em Análise
+              e Desenvolvimento de Sistemas na Unisinos. Sou apaixonado com tudo
+              que envolve tecnologia e meu objetivo é me tornar cada vez melhor
+              no que faço, que tal trabalharmos juntos em um projeto? Sou um
+              cara comunicativo e que se da muito bem com as pessoas. Veja meu
+              curriculo virtual abaixo para mais detalhes sobre mim.
             </p>
             <a
               href="../../../public/Currículo Tarso.pdf"

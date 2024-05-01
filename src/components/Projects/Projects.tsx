@@ -1,8 +1,15 @@
-import { useEffect } from "react";
 import "./Projects.scss";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { FaMosquito } from "react-icons/fa6";
+import { useEffect } from "react";
+
+//Animation
 import ScrollReveal from "scrollreveal";
+
+//Icons
+import { FaLinkedin, FaGithub, FaPiggyBank } from "react-icons/fa";
+import { FaMosquito } from "react-icons/fa6";
+import { LuMonitorSmartphone } from "react-icons/lu";
+import { FaUserTie } from "react-icons/fa";
+import { GiMegaphone } from "react-icons/gi";
 
 const Projects = () => {
   useEffect(() => {
@@ -16,6 +23,12 @@ const Projects = () => {
       duration: 1000,
       distance: "100px",
       origin: "rigth",
+      easing: "ease-in-out",
+    });
+    ScrollReveal({ reset: true }).reveal(".list_benefits li", {
+      duration: 1000,
+      distance: "100px",
+      origin: "left",
       easing: "ease-in-out",
     });
   }, []);
@@ -158,6 +171,65 @@ const Projects = () => {
               </li>
             </ul>
           </div>
+        </div>
+
+        <div className="div_benefits">
+          <h2>Beneficíos de ter um site</h2>
+          <ul className="list_benefits">
+            <li>
+              <span>
+                <LuMonitorSmartphone />
+              </span>
+              <h4>
+                <span>✔</span> Presença online
+              </h4>
+              <p>
+                As pessoas podem encontrar informações sobre você ou sua empresa
+                a qualquer momento e com grande facilidade, de qualquer lugar no
+                mundo.
+              </p>
+            </li>
+            <li>
+              <span>
+                <FaUserTie />
+              </span>
+              <h4>
+                <span>✔</span> Credibilidade e Profissionalismo
+              </h4>
+              <p>
+                Ter um site bem projetado e atualizado transmite uma imagem de
+                profissionalismo e credibilidade para clientes em potencial,
+                parceiros comerciais e recrutadores.
+              </p>
+            </li>
+            <li>
+              <span>
+                <GiMegaphone />
+              </span>
+              <h4>
+                <span>✔</span> Marketing e Publicidade
+              </h4>
+              <p>
+                Um site é uma ferramenta eficaz para marketing e publicidade.
+                Você pode usar seu site para promover seus produtos ou serviços
+                e compartilhar informações sobre sua empresa.
+              </p>
+            </li>
+            <li>
+              <span>
+                <FaPiggyBank />
+              </span>
+              <h4>
+                <span>✔</span> Baixo Custo de Manutenção
+              </h4>
+              <p>
+                Em comparação com outras formas de marketing e publicidade, como
+                anúncios impressos ou comerciais de TV, um site geralmente tem
+                um custo de manutenção mais baixo e pode oferecer um retorno
+                sobre o investimento (ROI) mais alto a longo prazo.
+              </p>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

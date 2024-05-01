@@ -1,5 +1,5 @@
 import "./Contact.scss";
-import { ChangeEvent, FormEvent, useEffect, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 
 //animation
 import ScrollReveal from "scrollreveal";
@@ -114,7 +114,7 @@ const Contact = () => {
               <input
                 type="hidden"
                 name="_next"
-                value="http://localhost:5173/"
+                value="https://tarsobri.vercel.app/"
               />
               <input type="text" name="_honey" style={{ display: "none" }} />
             </div>

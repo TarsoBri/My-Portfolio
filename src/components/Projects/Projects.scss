@@ -92,14 +92,16 @@
           list-style: none;
           display: flex;
           gap: 1em;
-        }
-        ul li a {
-          color: white;
-          font-size: 1.7em;
-          transition: all 0.2s;
+          li {
+            a {
+              color: white;
+              font-size: 1.7em;
+              transition: all 0.2s;
 
-          &:hover {
-            color: #a1a1a1;
+              &:hover {
+                color: #a1a1a1;
+              }
+            }
           }
         }
 
@@ -111,6 +113,40 @@
 
           span {
             font-size: 0.5em;
+          }
+        }
+      }
+    }
+
+    .div_benefits {
+      .list_benefits {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1em;
+
+        li {
+          display: flex;
+          flex-direction: column;
+          padding: 1.5em 1em;
+          background-color: $color1_5;
+          border-radius: 10px;
+          span {
+            font-size: 3em;
+            color: $color5;
+          }
+
+          h4 {
+            margin: 0;
+            span {
+              font-size: 1.5em;
+              color: $color5;
+            }
+          }
+          p {
+            color: #d9d9d9;
           }
         }
       }
@@ -139,6 +175,18 @@
       }
       .project_rigth {
         flex-direction: row-reverse;
+      }
+
+      .div_benefits {
+        .list_benefits {
+          grid-template-columns: 1fr 1fr;
+
+          li {
+            span {
+              text-align: center;
+            }
+          }
+        }
       }
     }
   }
