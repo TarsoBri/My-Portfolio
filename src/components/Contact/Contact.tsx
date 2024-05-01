@@ -14,6 +14,7 @@ const Contact = () => {
   const [firstName, setFirstName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
+  const [button, setButton] = useState<string>("Enviar");
 
   useEffect(() => {
     ScrollReveal({ reset: true }).reveal(".form", {
@@ -43,12 +44,18 @@ const Contact = () => {
     }
   };
 
-  const handleSubmitForm = (e: FormEvent) => {
-    e.preventDefault();
+  const handleSubmitForm = () => {
+    setButton("Enviando");
 
-    setFirstName("");
-    setEmail("");
-    setMessage("");
+    if (!button.includes("...")) {
+      for (let i: number = 0; i < 3; i++) {
+        ((i) => {
+          setTimeout(() => {
+            setButton((prev) => prev + ".");
+          }, 1000 * i);
+        })(i);
+      }
+    }
   };
 
   return (
@@ -58,7 +65,7 @@ const Contact = () => {
         <div className="form">
           <form
             onSubmit={handleSubmitForm}
-            action="https://formsubmit.co/tarsobrietzkeiracet@gmail.com"
+            action="https://formsubmit.co/82846a29906a6d328d9e34b1fb644dbd"
             method="POST"
           >
             <h3>Me envie uma menssagem</h3>
@@ -76,7 +83,7 @@ const Contact = () => {
               </label>
               <label>
                 <input
-                  type="text"
+                  type="email"
                   placeholder="Seu email"
                   name="email"
                   value={email}
@@ -88,16 +95,27 @@ const Contact = () => {
                 <textarea
                   placeholder="Mensagem"
                   name="message"
-                  required
                   value={message}
                   onChange={handleChangeInputs}
                   rows={6}
+                  required
                 />
               </label>
-              <input type="submit" className="contact_submit_btn" />
+              <input
+                type="submit"
+                className="contact_submit_btn"
+                value={button}
+                style={{ backgroundColor: button != "Enviar" ? "#453745" : "" }}
+              />
 
               <input type="hidden" name="_subject" value="Novo Contato!" />
               <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="box" />
+              <input
+                type="hidden"
+                name="_next"
+                value="http://localhost:5173/"
+              />
               <input type="text" name="_honey" style={{ display: "none" }} />
             </div>
 
