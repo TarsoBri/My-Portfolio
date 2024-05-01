@@ -174,7 +174,7 @@ const Projects = () => {
         </div>
 
         <div className="div_benefits">
-          <h2>Beneficíos de ter um site</h2>
+          <h2>Benefícios de ter um site</h2>
           <ul className="list_benefits">
             <li>
               <span>
