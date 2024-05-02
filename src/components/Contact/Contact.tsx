@@ -1,5 +1,6 @@
 import "./Contact.scss";
-import { ChangeEvent, useEffect, useState } from "react";
+import axios from "axios";
+import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 
 //animation
 import ScrollReveal from "scrollreveal";
@@ -7,6 +8,8 @@ import ScrollReveal from "scrollreveal";
 // icons
 import { FaWhatsapp, FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaArrowAltCircleUp } from "react-icons/fa";
+import { Oval } from "react-loading-icons";
+import { IoMdInformationCircleOutline } from "react-icons/io";
 
 const Contact = () => {
   const whatsappUrl = "https://wa.me/5551998390368?text=Olá Tarso, tudo bem?";
@@ -14,7 +17,8 @@ const Contact = () => {
   const [firstName, setFirstName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
-  const [button, setButton] = useState<string>("Enviar");
+  const [notfication, setNotfication] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
     ScrollReveal({ reset: true }).reveal(".form", {
@@ -44,30 +48,76 @@ const Contact = () => {
     }
   };
 
-  const handleSubmitForm = () => {
-    setButton("Enviando");
+  const handleSubmitForm = async (e: FormEvent) => {
+    e.preventDefault();
 
-    if (!button.includes("...")) {
-      for (let i: number = 0; i < 3; i++) {
-        ((i) => {
-          setTimeout(() => {
-            setButton((prev) => prev + ".");
-          }, 1000 * i);
-        })(i);
-      }
-    }
+    setLoading(true);
+
+    axios.defaults.headers.post["Content-Type"] = "application/json";
+    await axios
+      .post("https://formsubmit.co/ajax/tarsobrietzkeiracet@gmail.com", {
+        name: firstName,
+        email: email,
+        message: message,
+        _template: "box",
+        _subject: "Novo Contato!",
+        _honey: { display: "none" },
+      })
+      .then(() => setNotfication("Mensagem enviada com sucesso!"))
+      .catch(() => setNotfication("Erro ao enviar mensagem!"))
+      .finally(() => {
+        setLoading(false);
+        setFirstName("");
+        setEmail("");
+        setMessage("");
+      });
   };
+
+  useEffect(() => {
+    if (notfication != "") {
+      const containerNotfication = document.querySelector(
+        ".container_notfication"
+      ) as HTMLElement;
+      const containerNotficationLoader = document.querySelector(
+        ".container_notfication_loader"
+      ) as HTMLElement;
+
+      containerNotfication.style.animation =
+        "show_notfication 1.5s ease-in-out";
+
+      containerNotficationLoader.style.animation =
+        "show_notfication_loader 5.5s ease-in-out";
+
+      setTimeout(() => {
+        containerNotfication.style.animation =
+          "hidden_notfication 1.5s ease-in-out";
+        setTimeout(() => {
+          setNotfication("");
+        }, 1500);
+      }, 5000);
+    }
+  }, [notfication]);
 
   return (
     <div id="contact" className="contact_container">
+      {notfication != "" && (
+        <div
+          className="container_notfication"
+          style={{
+            backgroundColor: notfication.includes("Erro") ? "red" : "green",
+          }}
+        >
+          <p>{notfication}</p>
+          <span>
+            <IoMdInformationCircleOutline />
+          </span>
+          <div className="container_notfication_loader"></div>
+        </div>
+      )}
       <div className="contact_content">
         <h2>Contato</h2>
         <div className="form">
-          <form
-            onSubmit={handleSubmitForm}
-            action="https://formsubmit.co/82846a29906a6d328d9e34b1fb644dbd"
-            method="POST"
-          >
+          <form onSubmit={handleSubmitForm}>
             <h3>Me envie uma menssagem</h3>
 
             <div className="contact_content_inputs">
@@ -81,6 +131,7 @@ const Contact = () => {
                   required
                 />
               </label>
+
               <label>
                 <input
                   type="email"
@@ -91,6 +142,7 @@ const Contact = () => {
                   required
                 />
               </label>
+
               <label>
                 <textarea
                   placeholder="Mensagem"
@@ -101,22 +153,16 @@ const Contact = () => {
                   required
                 />
               </label>
-              <input
+
+              <button
                 type="submit"
                 className="contact_submit_btn"
-                value={button}
-                style={{ backgroundColor: button != "Enviar" ? "#453745" : "" }}
-              />
-
-              <input type="hidden" name="_subject" value="Novo Contato!" />
-              <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_template" value="box" />
-              <input
-                type="hidden"
-                name="_next"
-                value="https://tarsobri.vercel.app/"
-              />
-              <input type="text" name="_honey" style={{ display: "none" }} />
+                style={{
+                  backgroundColor: loading ? "#453745" : "",
+                }}
+              >
+                {loading ? <Oval className="loading" /> : "Enviar"}
+              </button>
             </div>
 
             <h4>Ou</h4>

@@ -3,6 +3,40 @@
 .contact_container {
   margin-bottom: 5em;
 
+  .container_notfication {
+    position: fixed;
+    top: 100px;
+    right: 0;
+    border-radius: 5px;
+    z-index: 99;
+    width: 50%;
+    max-width: 300px;
+    padding-inline: 1em;
+    margin-right: 5px;
+    transition: all 1s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    p {
+      text-align: end;
+    }
+    span {
+      margin-top: 5px;
+      font-size: 1.5em;
+    }
+
+    .container_notfication_loader {
+      background-color: white;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      border-radius: 5px;
+      height: 5px;
+    }
+  }
+
   .contact_content {
     display: flex;
     flex-direction: column;
@@ -65,17 +99,22 @@
 
           .contact_submit_btn {
             margin-top: 1em;
-            padding: 0.8em;
+            width: 100%;
+            height: 50px;
             border-radius: 5px;
             border: none;
-            background-color: $color5;
-            font-size: 1em;
+            font-size: 1.2em;
             color: white;
+            background-color: $color5;
             cursor: pointer;
             transition: all 0.2s;
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.37);
             &:hover {
               background-color: $color3;
+            }
+
+            .loading {
+              width: 1.5em;
             }
           }
         }
@@ -134,5 +173,38 @@
   }
   100% {
     transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes show_notfication {
+  0% {
+    transform: translateX(105%);
+  }
+  50% {
+    transform: translateX(-20%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes show_notfication_loader {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes hidden_notfication {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-20%);
+  }
+  100% {
+    transform: translateX(105%);
   }
 }

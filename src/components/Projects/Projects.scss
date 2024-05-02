@@ -182,6 +182,10 @@
           grid-template-columns: 1fr 1fr;
 
           li {
+            transition: all 0.2s;
+            &:hover {
+              background-color: #242628;
+            }
             span {
               text-align: center;
             }

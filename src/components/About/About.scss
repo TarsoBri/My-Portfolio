@@ -87,6 +87,9 @@
 
 @media (min-width: 850px) {
   .about_conatiner {
+    h2 {
+      margin-block: 1em 0;
+    }
     .about_main {
       .about_content {
         flex-direction: row;
