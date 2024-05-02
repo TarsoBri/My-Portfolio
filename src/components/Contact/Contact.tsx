@@ -55,7 +55,7 @@ const Contact = () => {
 
     axios.defaults.headers.post["Content-Type"] = "application/json";
     await axios
-      .post("https://formsubmit.co/ajax/tarsobrietzkeiracet@gmail.com", {
+      .post("https://formsubmit.co/ajax/82846a29906a6d328d9e34b1fb644dbd", {
         name: firstName,
         email: email,
         message: message,
