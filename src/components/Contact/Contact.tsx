@@ -17,9 +17,7 @@ const Contact = () => {
   const [firstName, setFirstName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
-  const [notfication, setNotfication] = useState<string>(
-    "Mensagem enviada com sucesso!"
-  );
+  const [notfication, setNotfication] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
