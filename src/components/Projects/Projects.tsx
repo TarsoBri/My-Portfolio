@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import ScrollReveal from "scrollreveal";
 
 //Icons
-import { FaLinkedin, FaGithub, FaPiggyBank } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaPiggyBank, FaCheck } from "react-icons/fa";
 import { FaMosquito } from "react-icons/fa6";
 import { LuMonitorSmartphone } from "react-icons/lu";
 import { FaUserTie } from "react-icons/fa";
@@ -181,7 +181,10 @@ const Projects = () => {
                 <LuMonitorSmartphone />
               </span>
               <h4>
-                <span>✔</span> Presença online
+                <span>
+                  <FaCheck />
+                </span>
+                Presença online
               </h4>
               <p>
                 As pessoas podem encontrar informações sobre você ou sua empresa
@@ -194,7 +197,10 @@ const Projects = () => {
                 <FaUserTie />
               </span>
               <h4>
-                <span>✔</span> Credibilidade e Profissionalismo
+                <span>
+                  <FaCheck />
+                </span>
+                Credibilidade e Profissionalismo
               </h4>
               <p>
                 Ter um site bem projetado e atualizado transmite uma imagem de
@@ -207,7 +213,10 @@ const Projects = () => {
                 <GiMegaphone />
               </span>
               <h4>
-                <span>✔</span> Marketing e Publicidade
+                <span>
+                  <FaCheck />
+                </span>
+                Marketing e Publicidade
               </h4>
               <p>
                 Um site é uma ferramenta eficaz para marketing e publicidade.
@@ -220,7 +229,10 @@ const Projects = () => {
                 <FaPiggyBank />
               </span>
               <h4>
-                <span>✔</span> Baixo Custo de Manutenção
+                <span>
+                  <FaCheck />
+                </span>
+                Baixo Custo de Manutenção
               </h4>
               <p>
                 Em comparação com outras formas de marketing e publicidade, como
