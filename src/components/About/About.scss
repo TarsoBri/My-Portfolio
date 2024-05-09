@@ -71,15 +71,15 @@
           border-radius: 10px;
           transform: translate(-20px, -20px);
           position: absolute;
-          width: 320px;
-          height: 330px;
+          width: 280px;
+          height: 300px;
           border: 3px solid $color5;
           visibility: hidden;
         }
 
         img {
           border-radius: 10px;
-          width: 300px;
+          width: 280px;
           z-index: 97;
           visibility: hidden;
         }
@@ -101,6 +101,9 @@
         }
         .about_img {
           width: 50%;
+
+          .img_contour {
+          }
         }
       }
     }
