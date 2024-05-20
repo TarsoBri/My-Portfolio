@@ -8,7 +8,7 @@
   margin: auto;
   width: 100vw;
   margin-top: 4em;
-  padding-block: 4em 6em;
+  padding-block: 2em;
   background-color: $color1_5;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.17);
 
@@ -20,7 +20,7 @@
     max-width: 900px;
     display: flex;
     flex-direction: column;
-    gap: 2em;
+    gap: 1em;
 
     .about_content {
       margin-bottom: 3em;

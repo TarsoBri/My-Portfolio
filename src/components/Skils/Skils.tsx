@@ -13,7 +13,14 @@ import {
   FaBootstrap,
   FaJs,
 } from "react-icons/fa";
-import { SiTypescript, SiMongodb, SiFirebase, SiExpress } from "react-icons/si";
+import {
+  SiTypescript,
+  SiMongodb,
+  SiFirebase,
+  SiExpress,
+  SiJest,
+  SiTestinglibrary,
+} from "react-icons/si";
 import { useEffect } from "react";
 import ScrollReveal from "scrollreveal";
 const Skils = () => {
@@ -41,6 +48,8 @@ const Skils = () => {
     <FaSass />,
     <FaBootstrap />,
     <SiFirebase />,
+    <SiJest />,
+    <SiTestinglibrary />,
   ];
 
   return (

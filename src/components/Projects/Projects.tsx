@@ -13,22 +13,16 @@ import { GiMegaphone } from "react-icons/gi";
 
 const Projects = () => {
   useEffect(() => {
-    ScrollReveal({ reset: true }).reveal(".project_left", {
+    ScrollReveal({ reset: true }).reveal(".showCardLeft", {
       duration: 1000,
       distance: "100px",
       origin: "left",
       easing: "ease-in-out",
     });
-    ScrollReveal({ reset: true }).reveal(".project_rigth", {
+    ScrollReveal({ reset: true }).reveal(".showCardRigth", {
       duration: 1000,
       distance: "100px",
       origin: "rigth",
-      easing: "ease-in-out",
-    });
-    ScrollReveal({ reset: true }).reveal(".list_benefits li", {
-      duration: 1000,
-      distance: "100px",
-      origin: "left",
       easing: "ease-in-out",
     });
   }, []);
@@ -37,7 +31,7 @@ const Projects = () => {
     <div id="projects" className="projects_container">
       <div className="projects_contents">
         <h2>Projetos</h2>
-        <div className="project project_left">
+        <div className="project project_left showCardLeft">
           <a
             className="project_img"
             href="https://vistorias-brasil.vercel.app/"
@@ -92,7 +86,7 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="project project_rigth">
+        <div className="project project_rigth showCardRigth">
           <a
             className="project_img"
             href="https://insidefilms.netlify.app/"
@@ -133,7 +127,7 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="project project_left">
+        <div className="project project_left showCardLeft">
           <a
             className="project_img"
             href="https://blogverse-by-tarsobri.netlify.app/"
@@ -144,7 +138,7 @@ const Projects = () => {
               alt="Projeto BlogVerse"
             />
           </a>
-          <div className="project_content">
+          <div className="project_content ">
             <h3 className="title_blog">
               Blog<span>Verse</span>
             </h3>
@@ -174,9 +168,9 @@ const Projects = () => {
         </div>
 
         <div className="div_benefits">
-          <h2>Benefícios de ter um site</h2>
+          <h2>Benefícios de se ter um site</h2>
           <ul className="list_benefits">
-            <li>
+            <li className="showCardRigth">
               <span>
                 <LuMonitorSmartphone />
               </span>
@@ -192,7 +186,7 @@ const Projects = () => {
                 mundo.
               </p>
             </li>
-            <li>
+            <li className="showCardLeft">
               <span>
                 <FaUserTie />
               </span>
@@ -208,7 +202,7 @@ const Projects = () => {
                 parceiros comerciais e recrutadores.
               </p>
             </li>
-            <li>
+            <li className="showCardRigth">
               <span>
                 <GiMegaphone />
               </span>
@@ -224,7 +218,7 @@ const Projects = () => {
                 e compartilhar informações sobre sua empresa.
               </p>
             </li>
-            <li>
+            <li className="showCardLeft">
               <span>
                 <FaPiggyBank />
               </span>
