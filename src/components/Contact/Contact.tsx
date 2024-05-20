@@ -88,14 +88,17 @@ const Contact = () => {
       containerNotficationLoader.style.animation =
         "show_notfication_loader 5.5s ease-in-out";
 
-      setTimeout(() => {
+      const hiddenTime = setTimeout(() => {
         containerNotfication.style.animation =
           "hidden_notfication 1.5s ease-in-out";
-        setTimeout(() => {
+        const setTimeNotficationToHidden = setTimeout(() => {
           setNotfication("");
           containerNotfication.style.display = "none";
         }, 1500);
+        return () => clearInterval(setTimeNotficationToHidden);
       }, 5000);
+
+      return () => clearInterval(hiddenTime);
     }
   }, [notfication]);
 

@@ -3,7 +3,6 @@ import { useEffect } from "react";
 
 //Animation
 import ScrollReveal from "scrollreveal";
-
 //Icons
 import { FaFilePdf } from "react-icons/fa6";
 
@@ -52,7 +51,7 @@ const About = () => {
               bem com as pessoas. Veja meu currículo virtual abaixo para mais
               detalhes sobre mim.
             </p>
-            <a href="/Currículo Tarso.pdf" download="Currículo de Tarso Bri">
+            <a href="/Currículo Tarso.pdf" download="Currículo de Tarso_bri">
               CV
               <span>
                 <FaFilePdf />
