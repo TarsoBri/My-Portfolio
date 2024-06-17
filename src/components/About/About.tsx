@@ -46,12 +46,12 @@ const About = () => {
               e Desenvolvimento de Sistemas na Unisinos. Sou apaixonado em tudo
               que envolve tecnologia e meu objetivo é adquirir conhecimentos e
               praticar cada vez mais para melhorar profissionalmente, buscando
-              sempre a segurança e a satisfação do cliente, que tal trabalharmos
-              juntos em um projeto? Sou um cara comunicativo e que se da muito
-              bem com as pessoas. Veja meu currículo virtual abaixo para mais
-              detalhes sobre mim.
+              sempre a segurança e a satisfação do cliente. Que tal trabalharmos
+              juntos em uma nova idéia? Sou um cara comunicativo e que se da
+              muito bem com as pessoas. Veja meu currículo virtual abaixo para
+              mais detalhes sobre mim.
             </p>
-            <a href="/Currículo Tarso.pdf" download="Currículo de Tarso_bri">
+            <a href="/Currículo.pdf" download="Currículo de Tarso_bri">
               CV
               <span>
                 <FaFilePdf />

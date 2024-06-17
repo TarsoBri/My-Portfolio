@@ -20,6 +20,7 @@ import {
   SiExpress,
   SiJest,
   SiTestinglibrary,
+  SiRedux,
 } from "react-icons/si";
 import { useEffect } from "react";
 import ScrollReveal from "scrollreveal";
@@ -36,6 +37,7 @@ const Skils = () => {
   const icons: JSX.Element[] = [
     <FaJs />,
     <FaReact />,
+    <SiRedux />,
     <FaNodeJs />,
     <SiExpress />,
     <SiTypescript />,

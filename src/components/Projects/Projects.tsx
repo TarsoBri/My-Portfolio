@@ -51,9 +51,9 @@ const Projects = () => {
               Brasil
             </h3>
             <p>
-              O VistoraisBrasil tem o objetivo de ser um gerenciador de
-              vistorias, onde temos dois tipos de usuários, os vistoriadores e
-              os clientes com suas respectivas vistorias há serem realizadas.
+              O VistoraisBrasil tem o objetivo de ser um sistema de gerenciador
+              de vistorias, onde temos dois tipos de usuários, os vistoriadores
+              e os clientes com suas respectivas vistorias há serem realizadas.
             </p>
             <ul>
               <li>
